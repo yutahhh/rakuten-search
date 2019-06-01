@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title AmazonSearch
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = yield
+    - flash.each do |type, msg|
+      - color = 'light-blue lighten-3' if type == 'notice'
+      - color = 'red lighten-1' if type == 'alert'
+      = javascript_tag "M.toast({html: '#{msg}',
+                                 classes: '#{color}',
+                                 displayLength: 2000})"

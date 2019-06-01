@@ -1,0 +1,12 @@
+.content
+  #search-box
+    = form_tag('/', method: :get) do
+      .container
+        %h1= "検索フォーム"
+        .row
+          = text_field_tag :food, "",  id: "food_search", name: "keyword", placeholder: "キーワード1"
+        .row
+          %button{title: "検索", type: "submit", class: "btn waves-effect waves-light"} 検索
+        %h2 検索結果
+        #item_list
+          = render partial: 'shared/item_list'
