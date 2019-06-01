@@ -1,5 +1,5 @@
-class FoodsController < ApplicationController
-  include FoodsHelper
+class ItemsController < ApplicationController
+  include ItemsHelper
 
   def index
     search_rakuten_api(params[:keyword]) if params[:keyword].present?
