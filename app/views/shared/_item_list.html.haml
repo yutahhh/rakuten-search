@@ -1,0 +1,14 @@
+- if @items.present?
+  - Array(@items).each do |item|
+    .list
+      .col.s12.m7
+        .card.horizontal
+          .card-image
+            %img{src: item['mediumImageUrls'][0]}
+          .card-stacked
+            .card-content
+              %p= item['itemName']
+            .card-action
+              = item['itemPrice'].to_s + "円"
+- else
+  %p= "0件だよ！"

@@ -39,6 +39,16 @@ gem 'pry-rails'
 
 gem 'rakuten_web_service'
 
+gem 'materialize-sass', '~> 1.0.0'
+
+gem 'material_icons'
+
+gem 'erb2haml'
+
+gem 'haml'
+
+gem 'jquery-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
